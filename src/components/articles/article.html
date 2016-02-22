@@ -1,0 +1,10 @@
+<div class="article">
+	<h3>{{::article.selected.title}}</h3>
+	<p>
+		Author: <span>{{::article.selected.author}}</span>
+		Date: <span>{{::article.selected.date | date:'dd.MM.yyyy'}}</span>
+	</p>
+	<p>
+		{{::article.selected.text}}
+	</p>
+</div>

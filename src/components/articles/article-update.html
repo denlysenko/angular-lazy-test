@@ -1,0 +1,21 @@
+<div class="article-update">
+	<form>
+		<div class="form-group">
+	    <label for="title">Title</label>
+	    <input type="text" class="form-control" id="title" placeholder="Title" ng-model="update.article.title">
+	  </div>
+	  <div class="form-group">
+	    <label for="text">Text</label>
+	    <textarea type="text" class="form-control" id="text" placeholder="Text" ng-model="update.article.text"></textarea>
+	  </div>
+	  <div class="form-group">
+	    <label for="author">Author</label>
+	    <input type="text" id="author" class="form-control" placeholder="Author" ng-model="update.article.author">
+	  </div>
+	  <div class="form-group">
+	  	<button type="button" class="btn btn-primary" ng-click="update.save()">
+	  		Save
+	  	</button>
+	  </div>
+	</form>
+</div>

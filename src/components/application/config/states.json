@@ -1,0 +1,32 @@
+[
+  {
+    "name": "app",
+    "url": "/",
+    "type": "load",
+    "src": "components/application/index"
+  },
+  {
+    "name": "app.index",
+    "url": "index",
+    "type": "load",
+    "src": "components/index-state/index"
+  },
+  {
+    "name": "app.articles",
+    "url": "articles",
+    "type": "load",
+    "src": "components/articles/index"
+  },
+  {
+    "name": "app.article",
+    "url": "articles/:id",
+    "type": "load",
+    "src": "components/articles/index"
+  },
+  {
+    "name": "app.update",
+    "url": "articles/update/:id",
+    "type": "load",
+    "src": "components/articles/index"
+  }
+]

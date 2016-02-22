@@ -1,0 +1,25 @@
+<div class="articles">
+	<ul class="list-group">
+	  <li class="list-group-item" ng-repeat="article in articles.list">
+	  	<h4>{{::article.title}}</h4>
+	  	<p>{{::article.description}}</p>
+	  	<p>
+	  		Author: <span>{{::article.author}}</span>
+	  	</p>
+	  	<p>
+	  		Date: <span>{{::article.date | date:'dd.MM.yyyy'}}</span>
+	  	</p>
+	  	<p class="actions">
+	  		<button type="button" class="btn btn-primary" ng-click="articles.showArticle(article.id)">
+	  			Read
+	  		</button>
+	  		<button type="button" class="btn btn-warning" ng-click="articles.showUpdateForm(article.id)">
+	  			Update
+	  		</button>
+	  		<button type="button" class="btn btn-danger" ng-click="articles.removeArticle(article)">
+	  			Remove
+	  		</button>
+	  	</p>
+	  </li>
+</ul>
+</div>

@@ -1,0 +1,10 @@
+{
+  "generator-angular-lazy": {
+    "appName": "angular-lazy",
+    "i18n": false,
+    "bootstrapCss": true,
+    "bootstrapJs": false,
+    "indexRouteName": "index",
+    "root": null
+  }
+}

@@ -1,0 +1,20 @@
+.index-state {
+	.animated {
+		position :relative;
+    -webkit-animation: mymove 4s; /* Chrome, Safari, Opera */ 
+    animation: mymove 4s;
+    top: 100px;
+	}
+}
+
+/* Chrome, Safari, Opera */ 
+@-webkit-keyframes mymove {
+    0%   {top: 0px;}
+    100% {top: 100px;}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+    0%   {top: 0px;}
+    100% {top: 100px;}
+}
