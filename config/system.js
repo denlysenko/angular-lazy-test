@@ -13,12 +13,85 @@ System.config({
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*"
   },
+  bundles: {
+    "bundles/main": [
+      "components/application/index.js",
+      "components/application/config/error-handling.js",
+      "components/application/application-controller.js",
+      "components/application/config/routing.js",
+      "components/application/application-route.js",
+      "components/application/stylesheets/application.css!github:systemjs/plugin-css@0.1.20.js",
+      "components/application/config/constants.json!github:systemjs/plugin-json@0.1.0.js",
+      "components/application/config/states.json!github:systemjs/plugin-json@0.1.0.js",
+      "components/application/application.html!github:systemjs/plugin-text@0.0.2.js",
+      "components/index-state/index.js",
+      "components/index-state/index-state-controller.js",
+      "components/index-state/index-route.js",
+      "components/index-state/index-state.css!github:systemjs/plugin-css@0.1.20.js",
+      "components/index-state/index-state.html!github:systemjs/plugin-text@0.0.2.js",
+      "github:systemjs/plugin-text@0.0.2.js",
+      "github:systemjs/plugin-text@0.0.2/text.js",
+      "github:systemjs/plugin-json@0.1.0.js",
+      "github:systemjs/plugin-json@0.1.0/json.js",
+      "github:systemjs/plugin-css@0.1.20.js",
+      "github:systemjs/plugin-css@0.1.20/css.js",
+      "github:ocombe/oclazyload@1.0.9.js",
+      "github:ocombe/oclazyload@1.0.9/dist/ocLazyLoad.js",
+      "github:christopherthielen/ui-router-extras@0.0.14.js",
+      "github:christopherthielen/ui-router-extras@0.0.14/release/ct-ui-router-extras.js",
+      "github:angular/bower-angular@1.5.0.js",
+      "github:angular/bower-angular@1.5.0/angular.js",
+      "github:angular-ui/ui-router@0.2.18.js",
+      "github:angular-ui/ui-router@0.2.18/angular-ui-router.js"
+    ],
+    "bundles/index": [
+      "index.js"
+    ],
+    "bundles/components/articles": [
+      "components/articles/index.js",
+      "components/articles/articles.css!github:systemjs/plugin-css@0.1.20.js",
+      "components/articles/articles-controller.js",
+      "components/articles/article-controller.js",
+      "components/articles/article-update-controller.js",
+      "components/articles/articles-directive.js",
+      "components/articles/articles-route.js",
+      "components/articles/articles.html!github:systemjs/plugin-text@0.0.2.js",
+      "components/articles/article-update.html!github:systemjs/plugin-text@0.0.2.js",
+      "components/articles/article.html!github:systemjs/plugin-text@0.0.2.js"
+    ],
+    "bundles/angular-lazy": [
+      "github:matoilic/angular-lazy@0.2.2.js",
+      "github:matoilic/angular-lazy@0.2.2/angular-lazy.js",
+      "github:matoilic/angular-lazy@0.2.2/component-loader-service.js",
+      "github:matoilic/angular-lazy@0.2.2/system-service.js",
+      "github:matoilic/angular-lazy@0.2.2/routing-configuration.js"
+    ],
+    "bundles/lodash": [
+      "npm:lodash@4.5.1.js",
+      "npm:lodash@4.5.1/lodash.js",
+      "github:jspm/nodelibs-buffer@0.1.0.js",
+      "github:jspm/nodelibs-process@0.1.2.js",
+      "github:jspm/nodelibs-buffer@0.1.0/index.js",
+      "github:jspm/nodelibs-process@0.1.2/index.js",
+      "npm:buffer@3.6.0.js",
+      "npm:process@0.11.2.js",
+      "npm:buffer@3.6.0/index.js",
+      "npm:process@0.11.2/browser.js",
+      "npm:base64-js@0.0.8.js",
+      "npm:ieee754@1.1.6.js",
+      "npm:isarray@1.0.0.js",
+      "npm:base64-js@0.0.8/lib/b64.js",
+      "npm:ieee754@1.1.6/index.js",
+      "npm:isarray@1.0.0/index.js"
+    ]
+  },
   buildCSS: true,
 
   map: {
     "angular": "github:angular/bower-angular@1.5.0",
     "angular-lazy": "github:matoilic/angular-lazy@0.2.2",
     "angular-mocks": "github:angular/bower-angular-mocks@1.5.0",
+    "angular-resource": "github:angular/bower-angular-resource@1.5.0",
     "angular-ui-router": "github:angular-ui/ui-router@0.2.18",
     "babel": "npm:babel-core@5.8.35",
     "babel-runtime": "npm:babel-runtime@5.8.35",
@@ -34,6 +107,9 @@ System.config({
       "angular": "github:angular/bower-angular@1.5.0"
     },
     "github:angular/bower-angular-mocks@1.5.0": {
+      "angular": "github:angular/bower-angular@1.5.0"
+    },
+    "github:angular/bower-angular-resource@1.5.0": {
       "angular": "github:angular/bower-angular@1.5.0"
     },
     "github:christopherthielen/ui-router-extras@0.0.14": {
@@ -187,78 +263,5 @@ System.config({
       "inherits": "npm:inherits@2.0.1",
       "process": "github:jspm/nodelibs-process@0.1.2"
     }
-  },
-
-  bundles: {
-    "bundles/main": [
-      "components/application/index.js",
-      "components/application/config/error-handling.js",
-      "components/application/application-controller.js",
-      "components/application/config/routing.js",
-      "components/application/application-route.js",
-      "components/application/stylesheets/application.css!github:systemjs/plugin-css@0.1.20.js",
-      "components/application/config/constants.json!github:systemjs/plugin-json@0.1.0.js",
-      "components/application/config/states.json!github:systemjs/plugin-json@0.1.0.js",
-      "components/application/application.html!github:systemjs/plugin-text@0.0.2.js",
-      "components/index-state/index.js",
-      "components/index-state/index-state-controller.js",
-      "components/index-state/index-route.js",
-      "components/index-state/index-state.css!github:systemjs/plugin-css@0.1.20.js",
-      "components/index-state/index-state.html!github:systemjs/plugin-text@0.0.2.js",
-      "github:systemjs/plugin-text@0.0.2.js",
-      "github:systemjs/plugin-text@0.0.2/text.js",
-      "github:systemjs/plugin-json@0.1.0.js",
-      "github:systemjs/plugin-json@0.1.0/json.js",
-      "github:systemjs/plugin-css@0.1.20.js",
-      "github:systemjs/plugin-css@0.1.20/css.js",
-      "github:ocombe/oclazyload@1.0.9.js",
-      "github:ocombe/oclazyload@1.0.9/dist/ocLazyLoad.js",
-      "github:christopherthielen/ui-router-extras@0.0.14.js",
-      "github:christopherthielen/ui-router-extras@0.0.14/release/ct-ui-router-extras.js",
-      "github:angular/bower-angular@1.5.0.js",
-      "github:angular/bower-angular@1.5.0/angular.js",
-      "github:angular-ui/ui-router@0.2.18.js",
-      "github:angular-ui/ui-router@0.2.18/angular-ui-router.js"
-    ],
-    "bundles/index": [
-      "index.js"
-    ],
-    "bundles/components/articles": [
-      "components/articles/index.js",
-      "components/articles/articles.css!github:systemjs/plugin-css@0.1.20.js",
-      "components/articles/articles-controller.js",
-      "components/articles/article-controller.js",
-      "components/articles/article-update-controller.js",
-      "components/articles/articles-directive.js",
-      "components/articles/articles-route.js",
-      "components/articles/articles.html!github:systemjs/plugin-text@0.0.2.js",
-      "components/articles/article-update.html!github:systemjs/plugin-text@0.0.2.js",
-      "components/articles/article.html!github:systemjs/plugin-text@0.0.2.js"
-    ],
-    "bundles/angular-lazy": [
-      "github:matoilic/angular-lazy@0.2.2.js",
-      "github:matoilic/angular-lazy@0.2.2/angular-lazy.js",
-      "github:matoilic/angular-lazy@0.2.2/component-loader-service.js",
-      "github:matoilic/angular-lazy@0.2.2/system-service.js",
-      "github:matoilic/angular-lazy@0.2.2/routing-configuration.js"
-    ],
-    "bundles/lodash": [
-      "npm:lodash@4.5.1.js",
-      "npm:lodash@4.5.1/lodash.js",
-      "github:jspm/nodelibs-buffer@0.1.0.js",
-      "github:jspm/nodelibs-process@0.1.2.js",
-      "github:jspm/nodelibs-buffer@0.1.0/index.js",
-      "github:jspm/nodelibs-process@0.1.2/index.js",
-      "npm:buffer@3.6.0.js",
-      "npm:process@0.11.2.js",
-      "npm:buffer@3.6.0/index.js",
-      "npm:process@0.11.2/browser.js",
-      "npm:base64-js@0.0.8.js",
-      "npm:ieee754@1.1.6.js",
-      "npm:isarray@1.0.0.js",
-      "npm:base64-js@0.0.8/lib/b64.js",
-      "npm:ieee754@1.1.6/index.js",
-      "npm:isarray@1.0.0/index.js"
-    ]
   }
 });
