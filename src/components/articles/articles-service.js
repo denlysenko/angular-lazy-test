@@ -4,19 +4,19 @@ class ArticlesService {
 	}
 
 	getAll() {
-		return $http.get('/articles');
+		return this._$http.get('/articles');
 	}
 
 	getById(id) {
-		return $http.get('/articles/' + id);
+		return this._$http.get('/articles/' + id);
 	}
 
 	update(id, data) {
-		return $http.put('/articles/' + id, data);
+		return this._$http.put('/articles/' + id, data);
 	}
 
 	destroy(id) {
-		return $http.delete('/articles/' + id);
+		return this._$http.delete('/articles/' + id);
 	}
 }
 

@@ -13,6 +13,7 @@ System.config({
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*"
   },
+
   bundles: {
     "bundles/main": [
       "components/application/index.js",
@@ -50,14 +51,15 @@ System.config({
     "bundles/components/articles": [
       "components/articles/index.js",
       "components/articles/articles.css!github:systemjs/plugin-css@0.1.20.js",
+      "components/articles/articles-service.js",
       "components/articles/articles-controller.js",
-      "components/articles/article-controller.js",
       "components/articles/article-update-controller.js",
+      "components/articles/article-controller.js",
       "components/articles/articles-directive.js",
       "components/articles/articles-route.js",
-      "components/articles/articles.html!github:systemjs/plugin-text@0.0.2.js",
+      "components/articles/article.html!github:systemjs/plugin-text@0.0.2.js",
       "components/articles/article-update.html!github:systemjs/plugin-text@0.0.2.js",
-      "components/articles/article.html!github:systemjs/plugin-text@0.0.2.js"
+      "components/articles/articles.html!github:systemjs/plugin-text@0.0.2.js"
     ],
     "bundles/angular-lazy": [
       "github:matoilic/angular-lazy@0.2.2.js",
@@ -83,6 +85,10 @@ System.config({
       "npm:base64-js@0.0.8/lib/b64.js",
       "npm:ieee754@1.1.6/index.js",
       "npm:isarray@1.0.0/index.js"
+    ],
+    "bundles/angular-resource": [
+      "github:angular/bower-angular-resource@1.5.0.js",
+      "github:angular/bower-angular-resource@1.5.0/angular-resource.js"
     ]
   },
   buildCSS: true,
