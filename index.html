@@ -3,16 +3,10 @@
     <head>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta charset="UTF-8">
-        <title>Angular lazy</title>
+        <title>Angular lazy test</title>
     </head>
     <body>
         <div id="applicationContainer" ng-app="application-component" ng-strict-di="true" class="container-fluid">
-        <nav class="navbar navbar-default">
-            <ul class="nav navbar-nav">
-                <li ng-click="application.checkPath()" ng-class="{'active': application.checkPath('/')}"><a href="/">Home</a></li>
-                <li ng-class="{'active': application.checkPAth('/articles')}"><a href="#/articles">Articles</a></li>
-            </ul>
-        </nav>
             <ui-view name="page"></ui-view>
         </div>
 

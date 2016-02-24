@@ -1,20 +1,40 @@
 .index-state {
-	.animated {
-		position :relative;
-    -webkit-animation: mymove 4s; /* Chrome, Safari, Opera */ 
-    animation: mymove 4s;
+
+    button.btn.btn-primary {
+        position: relative;
+        -webkit-animation: toLeft 4s; /* Chrome, Safari, Opera */ 
+        animation: toLeft 4s;
+        left: 0px;
+        top: 90px;
+    }
+}
+
+.animated {
+    position :relative;
+    -webkit-animation: toBottom 4s; /* Chrome, Safari, Opera */ 
+    animation: toBottom 4s;
     top: 100px;
-	}
 }
 
 /* Chrome, Safari, Opera */ 
-@-webkit-keyframes mymove {
+@-webkit-keyframes toBottom {
     0%   {top: 0px;}
     100% {top: 100px;}
 }
 
 /* Standard syntax */
-@keyframes mymove {
+@keyframes toBottom {
     0%   {top: 0px;}
     100% {top: 100px;}
+}
+/* Chrome, Safari, Opera */ 
+@-webkit-keyframes toLeft {
+    0%   {left: 100%;}
+    100% {left: 0px;}
+}
+
+/* Standard syntax */
+@keyframes toLeft {
+    0%   {left: 100%;}
+    100% {left: 0px;}
 }

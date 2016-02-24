@@ -3,9 +3,20 @@ import 'angular-mocks';
 import component from './index';
 
 describe('Index State', () => {
-    beforeEach(angular.mock.module(component.name));
+    var scope,
+    $location;
 
-    it('should pass the dummy test to verify the karma setup', () => {
-        expect(true).toEqual(true);
+    beforeEach(angular.mock.module(component.name));
+    beforeEach(inject($controller, $rootScope, _$location_) => {
+    	scope = $rootScope.$new();
+    	$location = _$location_;
+    	IndexStateController = $controller('IndexStateController as indexState', {
+    		$scope: scope
+    	});
+    });
+
+    it('should redirect to /data when getData() was called', () => {
+    		scope.indexState.getData();
+        expect($location.path()).toBe('/data');
     });
 });
