@@ -1,5 +1,6 @@
 describe('Application Component', () => {
     beforeEach(() => {
+        browser.ignoreSynchronization = true;
         browser.get(browser.baseUrl);
     });
 
