@@ -48,18 +48,13 @@ System.config({
     "bundles/index": [
       "index.js"
     ],
-    "bundles/components/articles": [
-      "components/articles/index.js",
-      "components/articles/articles.css!github:systemjs/plugin-css@0.1.20.js",
-      "components/articles/articles-service.js",
-      "components/articles/articles-controller.js",
-      "components/articles/article-update-controller.js",
-      "components/articles/article-controller.js",
-      "components/articles/articles-directive.js",
-      "components/articles/articles-route.js",
-      "components/articles/article.html!github:systemjs/plugin-text@0.0.2.js",
-      "components/articles/article-update.html!github:systemjs/plugin-text@0.0.2.js",
-      "components/articles/articles.html!github:systemjs/plugin-text@0.0.2.js"
+    "bundles/components/data-state": [
+      "components/data-state/index.js",
+      "components/data-state/data.css!github:systemjs/plugin-css@0.1.20.js",
+      "components/data-state/data-controller.js",
+      "components/data-state/data-service.js",
+      "components/data-state/data-route.js",
+      "components/data-state/data.html!github:systemjs/plugin-text@0.0.2.js"
     ],
     "bundles/angular-lazy": [
       "github:matoilic/angular-lazy@0.2.2.js",
@@ -67,6 +62,10 @@ System.config({
       "github:matoilic/angular-lazy@0.2.2/component-loader-service.js",
       "github:matoilic/angular-lazy@0.2.2/system-service.js",
       "github:matoilic/angular-lazy@0.2.2/routing-configuration.js"
+    ],
+    "bundles/angular-resource": [
+      "github:angular/bower-angular-resource@1.5.0.js",
+      "github:angular/bower-angular-resource@1.5.0/angular-resource.js"
     ],
     "bundles/lodash": [
       "npm:lodash@4.5.1.js",
@@ -77,18 +76,14 @@ System.config({
       "github:jspm/nodelibs-process@0.1.2/index.js",
       "npm:buffer@3.6.0.js",
       "npm:process@0.11.2.js",
-      "npm:buffer@3.6.0/index.js",
       "npm:process@0.11.2/browser.js",
+      "npm:buffer@3.6.0/index.js",
       "npm:base64-js@0.0.8.js",
-      "npm:ieee754@1.1.6.js",
       "npm:isarray@1.0.0.js",
+      "npm:ieee754@1.1.6.js",
+      "npm:isarray@1.0.0/index.js",
       "npm:base64-js@0.0.8/lib/b64.js",
-      "npm:ieee754@1.1.6/index.js",
-      "npm:isarray@1.0.0/index.js"
-    ],
-    "bundles/angular-resource": [
-      "github:angular/bower-angular-resource@1.5.0.js",
-      "github:angular/bower-angular-resource@1.5.0/angular-resource.js"
+      "npm:ieee754@1.1.6/index.js"
     ]
   },
   buildCSS: true,

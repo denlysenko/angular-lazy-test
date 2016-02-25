@@ -12,21 +12,9 @@
     "src": "components/index-state/index"
   },
   {
-    "name": "app.articles",
-    "url": "articles",
+    "name": "app.data",
+    "url": "data",
     "type": "load",
-    "src": "components/articles/index"
-  },
-  {
-    "name": "app.article",
-    "url": "articles/:id",
-    "type": "load",
-    "src": "components/articles/index"
-  },
-  {
-    "name": "app.update",
-    "url": "articles/update/:id",
-    "type": "load",
-    "src": "components/articles/index"
+    "src": "components/data-state/index"
   }
 ]
