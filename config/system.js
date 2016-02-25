@@ -22,7 +22,6 @@ System.config({
       "components/application/config/routing.js",
       "components/application/application-route.js",
       "components/application/stylesheets/application.css!github:systemjs/plugin-css@0.1.20.js",
-      "components/application/config/states.json!github:systemjs/plugin-json@0.1.0.js",
       "components/application/config/constants.json!github:systemjs/plugin-json@0.1.0.js",
       "components/application/config/states.json!github:systemjs/plugin-json@0.1.0.js",
       "components/application/application.html!github:systemjs/plugin-text@0.0.2.js",
@@ -52,8 +51,8 @@ System.config({
     "bundles/components/data-state": [
       "components/data-state/index.js",
       "components/data-state/data.css!github:systemjs/plugin-css@0.1.20.js",
-      "components/data-state/data-controller.js",
       "components/data-state/data-service.js",
+      "components/data-state/data-controller.js",
       "components/data-state/data-route.js",
       "components/data-state/data.html!github:systemjs/plugin-text@0.0.2.js"
     ],
@@ -71,21 +70,20 @@ System.config({
     "bundles/lodash": [
       "npm:lodash@4.5.1.js",
       "npm:lodash@4.5.1/lodash.js",
-      "github:jspm/nodelibs-process@0.1.2.js",
       "github:jspm/nodelibs-buffer@0.1.0.js",
-      "github:jspm/nodelibs-process@0.1.2/index.js",
+      "github:jspm/nodelibs-process@0.1.2.js",
       "github:jspm/nodelibs-buffer@0.1.0/index.js",
-      "npm:process@0.11.2.js",
+      "github:jspm/nodelibs-process@0.1.2/index.js",
       "npm:buffer@3.6.0.js",
       "npm:process@0.11.2.js",
-      "npm:process@0.11.2/browser.js",
       "npm:buffer@3.6.0/index.js",
+      "npm:process@0.11.2/browser.js",
       "npm:base64-js@0.0.8.js",
-      "npm:isarray@1.0.0.js",
       "npm:ieee754@1.1.6.js",
-      "npm:isarray@1.0.0/index.js",
+      "npm:isarray@1.0.0.js",
+      "npm:ieee754@1.1.6/index.js",
       "npm:base64-js@0.0.8/lib/b64.js",
-      "npm:ieee754@1.1.6/index.js"
+      "npm:isarray@1.0.0/index.js"
     ]
   },
   buildCSS: true,
