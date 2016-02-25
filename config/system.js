@@ -51,15 +51,15 @@ System.config({
     "bundles/components/articles": [
       "components/articles/index.js",
       "components/articles/articles.css!github:systemjs/plugin-css@0.1.20.js",
-      "components/articles/articles-controller.js",
       "components/articles/articles-service.js",
-      "components/articles/article-controller.js",
+      "components/articles/articles-controller.js",
       "components/articles/article-update-controller.js",
+      "components/articles/article-controller.js",
       "components/articles/articles-directive.js",
       "components/articles/articles-route.js",
-      "components/articles/articles.html!github:systemjs/plugin-text@0.0.2.js",
       "components/articles/article.html!github:systemjs/plugin-text@0.0.2.js",
-      "components/articles/article-update.html!github:systemjs/plugin-text@0.0.2.js"
+      "components/articles/article-update.html!github:systemjs/plugin-text@0.0.2.js",
+      "components/articles/articles.html!github:systemjs/plugin-text@0.0.2.js"
     ],
     "bundles/angular-lazy": [
       "github:matoilic/angular-lazy@0.2.2.js",
