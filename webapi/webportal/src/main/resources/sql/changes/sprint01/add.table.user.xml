@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd"
+                   objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+    <changeSet author="u1" context="core-schema" id="001.add.table.user">
+        <createTable tableName="USER">
+            <column name="ID" type="VARCHAR(50)">
+                <constraints nullable="false" uniqueConstraintName="NN_USER_ID"/>
+            </column>
+            <column name="CREATE_DATE" type="TIMESTAMP">
+                <constraints nullable="false" uniqueConstraintName="NN_USER_CREATE_DATE"/>
+            </column>
+            <column name="LOGIN" type="VARCHAR(50)">
+                <constraints nullable="false" uniqueConstraintName="NN_USER_LOGIN"/>
+            </column>
+            <column name="PASSWORD" type="VARCHAR(50)"/>
+        </createTable>
+        <addPrimaryKey columnNames="ID" constraintName="PK_USER" tableName="USER"/>
+        <addUniqueConstraint tableName="USER" columnNames="LOGIN" constraintName="UNQ_USER_LOGIN"/>
+    </changeSet>
+</databaseChangeLog>

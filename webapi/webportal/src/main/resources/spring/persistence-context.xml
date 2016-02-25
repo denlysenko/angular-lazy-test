@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns="http://www.springframework.org/schema/beans" xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+    <context:annotation-config/>
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+    <context:component-scan base-package="ua.qoderoom.*"/>
+
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean"
+          depends-on="liquiBaseInitializer">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="packagesToScan" value="ua.qoderoom"/>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">${hibernate.dialect}</prop>
+                <prop key="hibernate.default_schema">${hibernate.schema.name}</prop>
+                <prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop>
+                <prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
+                <prop key="hibernate.format_sql">true</prop>
+            </props>
+        </property>
+        <property name="mappingLocations" value="classpath:hbm/user.mapping.hbm.xml"/>
+    </bean>
+
+    <bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+
+    <!-- JPA annotations bean post processor -->
+    <bean class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor"/>
+
+    <!-- Exception translation bean post processor -->
+    <bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor"/>
+
+
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+        <property name="driverClass" value="${db.driverClass}"/>
+        <property name="jdbcUrl" value="${db.jdbcUrl}"/>
+        <property name="user" value="${db.user}"/>
+        <property name="password" value="${db.password}"/>
+
+        <property name="maxPoolSize" value="${db.maxPoolSize}"/>
+        <property name="maxIdleTime" value="${db.maxIdleTime}"/>
+        <property name="maxConnectionAge" value="${db.maxConnectionAge}"/>
+        <property name="acquireRetryAttempts" value="${db.acquireRetryAttempts}"/>
+        <property name="maxIdleTimeExcessConnections" value="${db.max.idle.time.excess.connections}"/>
+        <property name="idleConnectionTestPeriod" value="${db.idle.connection.test.period}"/>
+        <property name="preferredTestQuery" value="${db.preferred.test.query}"/>
+        <property name="testConnectionOnCheckout" value="${db.test.connection.on.checkout}"/>
+        <property name="testConnectionOnCheckin" value="${db.test.connection.on.checkin}"/>
+        <property name="checkoutTimeout" value="${db.checkout.timeout}"/>
+    </bean>
+
+
+</beans>
