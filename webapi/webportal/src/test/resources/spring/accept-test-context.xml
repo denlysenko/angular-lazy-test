@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <import resource="app-properties-context.xml"/>
+
+    <import resource="classpath:spring/persistence-context.xml"/>
+
+    <bean id="liquiBaseInitializer" class="ua.qoderoom.liquibase.LiquiBaseInitializer" init-method="insertInitialDatabase">
+        <property name="rootDirName" value="webportal"/>
+        <property name="dataSource" ref="dataSource"/>
+        <property name="context" value="core-schema"/>
+        <property name="changesPath" value="/src/main/resources/sql/sql-changes.xml"/>
+        <property name="dbSchema" value="${db.schema.name}"/>
+    </bean>
+
+    <bean id="dbUnitUtil" class="ua.qoderoom.dbunit.DbUnitUtils" init-method="init"
+          depends-on="liquiBaseInitializer">
+        <property name="rootFolder" value="webportal"/>
+        <property name="dbSchema" value="${db.schema.name}"/>
+        <property name="dataSource" ref="dataSource"/>
+        <property name="dtdSchemaName" value="accept.dtd"/>
+    </bean>
+</beans>
