@@ -51,8 +51,8 @@ System.config({
     "bundles/components/data-state": [
       "components/data-state/index.js",
       "components/data-state/data.css!github:systemjs/plugin-css@0.1.20.js",
-      "components/data-state/data-service.js",
       "components/data-state/data-controller.js",
+      "components/data-state/data-service.js",
       "components/data-state/data-route.js",
       "components/data-state/data.html!github:systemjs/plugin-text@0.0.2.js"
     ],
