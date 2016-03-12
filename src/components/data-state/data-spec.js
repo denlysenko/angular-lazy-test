@@ -10,7 +10,7 @@ describe('DataController', () => {
         DataService;
 
     beforeEach(angular.mock.module(component.name));
-    beforeEach(inject($controller, $rootScope, _$httpBackend_, _DataService_) => {
+    beforeEach(inject(($controller, $rootScope, _$httpBackend_, _DataService_) => {
     	scope = $rootScope.$new();
         $httpBackend = _$httpBackend_;
         DataService = _DataService_;
@@ -18,13 +18,11 @@ describe('DataController', () => {
     		$scope: scope,
             DataService: DataService
     	});
-    });
+    }));
 
     it('should get data', () => {
 
-        var mockResponse = {
-            data: 'Response'
-        };
+        var mockResponse = 'Response';
         
         $httpBackend.when('GET', 'http://vgb-main-server.cloudapp.net:8080/webportal/webapi/myresource').respond(200, mockResponse);
         DataService.get();
